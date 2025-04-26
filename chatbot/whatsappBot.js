@@ -26,18 +26,18 @@ async function initializeWhatsappBot() {
     try {
         // Create new client instance with NoAuth strategy
         client = new Client({
-            authStrategy: new LocalAuth()
-            // authStrategy: new NoAuth(),
-            // puppeteer: {
-            //     headless: true,
-            //     args: [
-            //         '--no-sandbox',
-            //         '--disable-setuid-sandbox',
-            //         '--disable-dev-shm-usage',
-            //         '--disable-accelerated-2d-canvas',
-            //         '--disable-gpu'
-            //     ]
-            // }
+            // authStrategy: new LocalAuth()
+            authStrategy: new NoAuth(),
+            puppeteer: {
+                headless: true,
+                args: [
+                    '--no-sandbox',
+                    '--disable-setuid-sandbox',
+                    '--disable-dev-shm-usage',
+                    '--disable-accelerated-2d-canvas',
+                    '--disable-gpu'
+                ]
+            }
         });
 
         console.log("Starting WhatsApp bot initialization...");
