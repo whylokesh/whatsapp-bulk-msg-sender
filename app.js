@@ -9,7 +9,6 @@ const socketIO = require('socket.io');
 const debug = require('debug')('whatsapp-bulk-sender:server');
 
 const indexRouter = require("./routes/index");
-const usersRouter = require("./routes/users");
 
 const app = express();
 const server = http.createServer(app);
