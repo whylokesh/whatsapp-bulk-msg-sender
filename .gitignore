@@ -1,0 +1,10 @@
+# Whatsapp Auth & Cache
+.wwebjs_auth
+.wwebjs_cache
+
+# Modules
+node_modules
+
+# Environment Variavles
+.env
+
