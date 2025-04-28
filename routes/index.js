@@ -90,6 +90,12 @@ router.post("/send-message", async (req, res) => {
 
     // Send messages with delay
     for (const phoneNumber of numbersArray) {
+      if (phoneNumber.length < 10) {
+        console.error(`Invalid phone number: ${phoneNumber}`);
+        continue; // Skip invalid numbers
+      }
+
+      console.log(`Sending message to ${phoneNumber}`);
       const success = await sendMessageToUser(phoneNumber, message);
       if (!success) {
         throw new Error(`Failed to send message to ${phoneNumber}`);
